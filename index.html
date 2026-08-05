@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vera Living — Premium Interior & Architecture Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+:root {
+  --bg-main: #fcfbf9;
+  --bg-card: #ffffff;
+  --bg-subtle: #f3f0ea;
+  --primary-gold: #d97706;
+  --primary-gold-hover: #b45309;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(252, 251, 249, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.logo-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-gold);
+}
+
+.nav-btn {
+  text-decoration: none;
+  background: var(--primary-gold);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
+}
+
+.nav-btn:hover {
+  background: var(--primary-gold-hover);
+  transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 120px 5% 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* CLICKABLE TOP HERO IMAGE */
+.hero-image-box {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  display: block;
+  background: #fff;
+  transition: 0.3s transform ease, 0.3s box-shadow ease;
+}
+
+.hero-image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-btn-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  text-decoration: none;
+  background: var(--primary-gold);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+  box-shadow: 0 8px 25px rgba(217, 119, 6, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-gold-hover);
+  transform: translateY(-2px);
+}
+
+.badge-tag {
+  background: rgba(217, 119, 6, 0.1);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  color: var(--primary-gold);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.hero h1 span {
+  color: var(--primary-gold);
+  font-style: italic;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+/* STATS SECTION */
+.stats-section {
+  padding: 20px 5% 50px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: var(--bg-card);
+  padding: 25px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-gold);
+  margin-bottom: 4px;
+}
+
+.stat-item p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  padding: 50px 5%;
+  background: var(--bg-subtle);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--card-shadow);
+  transition: 0.3s;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-gold);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(217, 119, 6, 0.1);
+  color: var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.bento-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bento-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--primary-gold);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* PROCESS WORKFLOW SECTION */
+.process-section {
+  padding: 60px 5%;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.process-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+  box-shadow: var(--card-shadow);
+}
+
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-gold);
+  margin-bottom: 8px;
+}
+
+.process-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.process-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* PORTFOLIO SHOWCASE SECTION */
+.portfolio-section {
+  padding: 60px 5%;
+  background: var(--bg-subtle);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.portfolio-info p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* MIDDLE BANNER */
+.middle-banner {
+  padding: 40px 5%;
+}
+
+.banner-box {
+  max-width: 1150px;
+  margin: 0 auto;
+  background: #1e293b;
+  color: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.banner-info p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+  align-items: center;
+}
+
+.feature-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.feature-point i {
+  color: var(--primary-gold);
+}
+
+.banner-img img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials-section {
+  padding: 60px 5%;
+  background: var(--bg-subtle);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.stars {
+  color: var(--primary-gold);
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.review-card p {
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.client-meta h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.client-meta span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* FAQ SECTION */
+.faq-section {
+  padding: 60px 5%;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.faq-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 40px 5% 80px;
+}
+
+.cta-box {
+  max-width: 1150px;
+  margin: 0 auto;
+  background: var(--primary-gold);
+  border-radius: 24px;
+  padding: 45px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  font-size: 15px;
+  margin: 0 auto 25px;
+  max-width: 600px;
+  opacity: 0.95;
+}
+
+.cta-btn-light {
+  text-decoration: none;
+  background: #fff;
+  color: var(--text-primary);
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn-light:hover {
+  transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: #fff;
+  border-top: 1px solid var(--border-color);
+  padding: 50px 5% 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1150px;
+  margin: 0 auto 40px;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-col p {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary-gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.float-wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.float-wa:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (min-width: 640px) {
+  .hero h1 { font-size: 46px; }
+  .stats-grid { grid-template-columns: repeat(4, 1fr); }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+  nav { padding: 18px 8%; }
+  .hero { padding: 140px 8% 60px; }
+  .hero h1 { font-size: 54px; }
+  .bento-grid { grid-template-columns: repeat(3, 1fr); }
+  .process-grid { grid-template-columns: repeat(4, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  .banner-box { grid-template-columns: 1.2fr 0.8fr; text-align: left; padding: 50px; }
+  .banner-features { align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <div class="logo-badge"><i class="fa-solid fa-couch"></i></div>
+    Vera Living
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+  <a href="#" data-wa class="nav-btn" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i> Free Consultation
+  </a>
+</nav>
+
+<section class="hero">
+
+  <a href="#" data-wa class="hero-image-box" target="_blank" title="Click to chat on WhatsApp">
+    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Luxury Interior Living Room">
+  </a>
+
+  <div class="hero-btn-wrap">
+    <a href="#" data-wa class="btn-primary" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Book Site Visit
+    </a>
+  </div>
+
+  <div class="hero-text-content">
+    <div class="badge-tag">
+      <i class="fa-solid fa-crown"></i> Luxury Interior & Architecture
+    </div>
+    <h1>Transforming Spaces Into <span>Timeless Masterpieces</span></h1>
+    <p>We blend modern aesthetics with functional luxury to craft bespoke interiors for premium residences, villas, and boutique commercial spaces.</p>
+  </div>
+
+</section>
+
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <h3>350+</h3>
+      <p>Luxury Homes Designed</p>
+    </div>
+    <div class="stat-item">
+      <h3>12+</h3>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat-item">
+      <h3>100%</h3>
+      <p>On-Time Delivery</p>
+    </div>
+    <div class="stat-item">
+      <h3>15 Year</h3>
+      <p>Material Warranty</p>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="section-title">
+    <h2>Our Bespoke Services</h2>
+    <p>Complete turn-key interior design and architectural planning solutions.</p>
+  </div>
+
+  <div class="bento-grid">
+    
+    <div class="bento-card">
+      <div>
+        <div class="card-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+        <h3>Full Home Turnkey Interiors</h3>
+        <p>End-to-end design, modular furniture, civil work, lighting, and final handover with zero hassle.</p>
+      </div>
+      <a href="#" data-wa class="card-link" target="_blank">Inquire Now <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="bento-card">
+      <div>
+        <div class="card-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+        <h3>3D Visualization & Architecture</h3>
+        <p>Photorealistic 3D renders and walk-throughs to preview your space before actual execution starts.</p>
+      </div>
+      <a href="#" data-wa class="card-link" target="_blank">Inquire Now <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div class="bento-card">
+      <div>
+        <div class="card-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+        <h3>Custom Furniture & Kitchens</h3>
+        <p>German-engineered modular kitchens, custom wardrobes, and hand-crafted luxury furniture units.</p>
+      </div>
+      <a href="#" data-wa class="card-link" target="_blank">Inquire Now <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<section class="process-section" id="process">
+  <div class="section-title">
+    <h2>How We Work</h2>
+    <p>A simple 4-step seamless journey from concept to reality.</p>
+  </div>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="step-num">01</div>
+      <h4>Discovery Call</h4>
+      <p>We discuss your lifestyle, budget, layout ideas, and aesthetic preferences.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="step-num">02</div>
+      <h4>3D Design & Plan</h4>
+      <p>We present customized 3D renders, material boards, and detailed cost estimates.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="step-num">03</div>
+      <h4>Execution & Build</h4>
+      <p>Our skilled craftsmen execute civil, electrical, and furniture works under strict supervision.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="step-num">04</div>
+      <h4>Handover</h4>
+      <p>Deep cleaning, final inspection, and handing over your dream home on schedule.</p>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-section" id="portfolio">
+  <div class="section-title">
+    <h2>Recent Work</h2>
+    <p>Explore some of our recently completed interior projects.</p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Minimalist Villa">
+      <div class="portfolio-info">
+        <h4>The Royal Villa</h4>
+        <p>4 BHK Modern Minimalist Interior • Green Glen</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Penthouse Living">
+      <div class="portfolio-info">
+        <h4>Skyline Penthouse</h4>
+        <p>Contemporary Luxury Living • Indiranagar</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Modular Kitchen">
+      <div class="portfolio-info">
+        <h4>Italian Modular Kitchen</h4>
+        <p>Acrylic Finish & Smart Hardware • Jubilee Hills</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="middle-banner">
+  <div class="banner-box">
+    <div class="banner-info">
+      <h3>Unmatched Craftsmanship & Transparent Pricing</h3>
+      <p>We eliminate hidden costs and project delays. Get fixed timelines with dedicated project managers.</p>
+      
+      <div class="banner-features">
+        <div class="feature-point">
+          <i class="fa-solid fa-circle-check"></i> 146 Quality Checkpoints
+        </div>
+        <div class="feature-point">
+          <i class="fa-solid fa-circle-check"></i> Factory-Finished Precision
+        </div>
+        <div class="feature-point">
+          <i class="fa-solid fa-circle-check"></i> No Price Escalation Guarantee
+        </div>
+      </div>
+
+      <a href="#" data-wa class="btn-primary" style="padding: 12px 26px; font-size: 13px;" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Speak With Principal Architect
+      </a>
+    </div>
+
+    <div class="banner-img">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Interior Architect Work">
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div class="section-title">
+    <h2>Client Stories</h2>
+    <p>Read what home owners say about their experience with Vera Living.</p>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p>"Vera Living delivered our villa 10 days ahead of schedule! The 3D render and actual home look 100% identical."</p>
+      <div class="client-meta">
+        <h5>Vikram & Sneha Mehta</h5>
+        <span>Villa Owners</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p>"The finish quality of modular wardrobes and lighting layout is top tier. Excellent team and transparent pricing."</p>
+      <div class="client-meta">
+        <h5>Ananya Deshmukh</h5>
+        <span>Penthouse Owner</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p>"Professional architects who listened to all our custom requirements carefully. Highly recommended!"</p>
+      <div class="client-meta">
+        <h5>Rajesh Malhotra</h5>
+        <span>3 BHK Home Owner</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="section-title">
+    <h2>Frequently Asked Questions</h2>
+    <p>Got questions? We've got answers.</p>
+  </div>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <h4>How much time does a full home interior take?</h4>
+      <p>Typically, a 3 BHK or Villa takes between 45 to 60 days from design sign-off to final handover.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do you provide warranty on furniture & materials?</h4>
+      <p>Yes, we offer up to 15 years flat warranty on core plywood and hardware components.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Can I customize the design according to my budget?</h4>
+      <p>Absolutely. Our architects tailor material selections and layouts based on your target budget.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="cta-box">
+    <h2>Ready To Build Your Dream Home?</h2>
+    <p>Get a free 3D estimate and site consultation with our expert interior designer.</p>
+    <a href="#" data-wa class="cta-btn-light" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Get Free Quote
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="logo" style="margin-bottom: 14px; color:#fff;">
+        <div class="logo-badge"><i class="fa-solid fa-couch"></i></div>
+        Vera Living
+      </div>
+      <p>Crafting luxury interiors, villas, and modern residential spaces with perfection.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#portfolio">Portfolio</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <div class="footer-links">
+        <a href="#services">Turnkey Interiors</a>
+        <a href="#services">3D Visualization</a>
+        <a href="#services">Modular Kitchens</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <p style="margin-bottom:8px;"><i class="fa-solid fa-phone" style="color:var(--primary-gold); margin-right:8px;"></i> +91 74139 51362</p>
+      <p><i class="fa-solid fa-envelope" style="color:var(--primary-gold); margin-right:8px;"></i> contact@veraliving.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Vera Living Studio. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a href="#" data-wa class="float-wa" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+  const phoneNumber = "+917413951362";
+  const message = encodeURIComponent("Hello! I want a free design estimate for my home interior.");
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  document.querySelectorAll('[data-wa]').forEach(link => {
+    link.href = whatsappUrl;
+  });
+</script>
+
+</body>
+</html>
