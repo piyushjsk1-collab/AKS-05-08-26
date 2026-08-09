@@ -3,11 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Vera Living — Premium Interior & Architecture Studio</title>
+<meta name="description" content="Vera Living creates thoughtfully designed interiors, custom furniture, modular kitchens and architectural solutions for modern homes and spaces.">
+<meta name="robots" content="index, follow">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
@@ -30,7 +34,8 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -38,7 +43,12 @@ html, body {
   color: var(--text-primary);
 }
 
+body {
+  line-height: 1.5;
+}
+
 /* NAVBAR */
+
 nav {
   width: 100%;
   position: fixed;
@@ -49,8 +59,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(252, 251, 249, 0.95);
+  background: rgba(252, 251, 249, 0.96);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -114,7 +125,8 @@ nav {
   transform: translateY(-2px);
 }
 
-/* HERO SECTION */
+/* HERO */
+
 .hero {
   padding: 120px 5% 50px;
   display: flex;
@@ -124,7 +136,6 @@ nav {
   position: relative;
 }
 
-/* CLICKABLE TOP HERO IMAGE WITH OFFER OVERLAY */
 .hero-image-box {
   width: 100%;
   max-width: 420px;
@@ -152,36 +163,21 @@ nav {
   object-fit: cover;
 }
 
-/* OFFER BADGE OVERLAY ON IMAGE */
 .image-offer-overlay {
-position: absolute;
+  position: absolute;
   bottom: 14px;
   left: 14px;
   right: 14px;
-
-  /* 1. Translucent Black Color (0.5 - 0.7 Opacity ke saath) */
-  background: rgba(0, 0, 0, 0.22); 
-
-  /* 2. Background Blur Effect (Frosted Glass Look) */
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(12px); /* Safari support ke liye */
-
-  /* Optional: Light Subtle Border taaki glass look popping lage */
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
   padding: 10px 14px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  animation: pulseGlow 2.5s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 .offer-tag-main {
@@ -190,9 +186,9 @@ position: absolute;
 }
 
 .offer-tag-main .discount {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
-  color: #00ff9d;
+  color: #ffffff;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   display: flex;
@@ -202,7 +198,7 @@ position: absolute;
 
 .offer-tag-main .sub-text {
   font-size: 11px;
-  color: #cbd5e1;
+  color: #e2e8f0;
   font-weight: 500;
 }
 
@@ -279,10 +275,11 @@ position: absolute;
   color: var(--text-secondary);
   font-size: 16px;
   max-width: 680px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* STATS SECTION */
+/* STATS */
+
 .stats-section {
   padding: 20px 5% 50px;
 }
@@ -306,7 +303,7 @@ position: absolute;
 
 .stat-item h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--primary-gold);
   margin-bottom: 4px;
@@ -318,11 +315,7 @@ position: absolute;
   font-weight: 600;
 }
 
-/* SERVICES SECTION */
-.services-section {
-  padding: 50px 5%;
-  background: var(--bg-subtle);
-}
+/* COMMON SECTION */
 
 .section-title {
   text-align: center;
@@ -339,6 +332,13 @@ position: absolute;
 .section-title p {
   color: var(--text-secondary);
   font-size: 15px;
+}
+
+/* SERVICES */
+
+.services-section {
+  padding: 50px 5%;
+  background: var(--bg-subtle);
 }
 
 .bento-grid {
@@ -402,7 +402,8 @@ position: absolute;
   gap: 6px;
 }
 
-/* PROCESS WORKFLOW SECTION */
+/* PROCESS */
+
 .process-section {
   padding: 60px 5%;
 }
@@ -444,7 +445,8 @@ position: absolute;
   line-height: 1.5;
 }
 
-/* PORTFOLIO SHOWCASE SECTION */
+/* PORTFOLIO */
+
 .portfolio-section {
   padding: 60px 5%;
   background: var(--bg-subtle);
@@ -489,6 +491,7 @@ position: absolute;
 }
 
 /* MIDDLE BANNER */
+
 .middle-banner {
   padding: 40px 5%;
 }
@@ -547,7 +550,8 @@ position: absolute;
   display: block;
 }
 
-/* TESTIMONIALS SECTION */
+/* TESTIMONIAL / APPROACH */
+
 .testimonials-section {
   padding: 60px 5%;
   background: var(--bg-subtle);
@@ -569,17 +573,22 @@ position: absolute;
   box-shadow: var(--card-shadow);
 }
 
-.stars {
+.review-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 119, 6, 0.1);
   color: var(--primary-gold);
-  margin-bottom: 12px;
-  font-size: 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .review-card p {
   color: var(--text-primary);
   font-size: 14px;
-  line-height: 1.6;
-  font-style: italic;
+  line-height: 1.7;
   margin-bottom: 15px;
 }
 
@@ -593,7 +602,8 @@ position: absolute;
   color: var(--text-secondary);
 }
 
-/* FAQ SECTION */
+/* FAQ */
+
 .faq-section {
   padding: 60px 5%;
 }
@@ -623,10 +633,50 @@ position: absolute;
 .faq-item p {
   color: var(--text-secondary);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* CTA SECTION */
+/* TERMS */
+
+.terms-section {
+  padding: 60px 5%;
+  background: #ffffff;
+}
+
+.terms-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.terms-container h3 {
+  font-size: 18px;
+  margin: 28px 0 8px;
+}
+
+.terms-container h3:first-child {
+  margin-top: 0;
+}
+
+.terms-container p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.terms-container ul {
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.terms-container li {
+  margin-bottom: 7px;
+}
+
+/* CTA */
+
 .cta-section {
   padding: 40px 5% 80px;
 }
@@ -674,6 +724,7 @@ position: absolute;
 }
 
 /* FOOTER */
+
 footer {
   background: #0f172a;
   color: #fff;
@@ -727,7 +778,8 @@ footer {
   font-size: 12px;
 }
 
-/* FLOATING WHATSAPP BUTTON */
+/* FLOATING WHATSAPP */
+
 .float-wa {
   position: fixed;
   right: 20px;
@@ -751,32 +803,135 @@ footer {
   transform: scale(1.1);
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* RESPONSIVE */
+
 @media (min-width: 640px) {
-  .hero h1 { font-size: 46px; }
-  .stats-grid { grid-template-columns: repeat(4, 1fr); }
-  .bento-grid { grid-template-columns: repeat(2, 1fr); }
-  .process-grid { grid-template-columns: repeat(2, 1fr); }
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 992px) {
-  nav { padding: 18px 8%; }
-  .hero { padding: 140px 8% 60px; }
-  .hero h1 { font-size: 54px; }
-  .bento-grid { grid-template-columns: repeat(3, 1fr); }
-  .process-grid { grid-template-columns: repeat(4, 1fr); }
-  .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
-  .reviews-grid { grid-template-columns: repeat(3, 1fr); }
-  .banner-box { grid-template-columns: 1.2fr 0.8fr; text-align: left; padding: 50px; }
-  .banner-features { align-items: flex-start; }
-  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; }
+  nav {
+    padding: 18px 8%;
+  }
+
+  .hero {
+    padding: 140px 8% 60px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .banner-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    text-align: left;
+    padding: 50px;
+  }
+
+  .banner-features {
+    align-items: flex-start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  }
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-btn {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  .hero-image-box {
+    max-width: 390px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 19px;
+  }
+
+  .logo-badge {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+  }
+
+  .hero {
+    padding-top: 105px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .image-offer-overlay {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 9px 10px;
+  }
+
+  .wa-action-chip {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
 }
 </style>
 </head>
@@ -784,9 +939,12 @@ footer {
 <body>
 
 <!-- NAVBAR -->
+
 <nav>
   <div class="logo">
-    <div class="logo-badge"><i class="fa-solid fa-couch"></i></div>
+    <div class="logo-badge">
+      <i class="fa-solid fa-couch"></i>
+    </div>
     Vera Living
   </div>
 
@@ -796,333 +954,881 @@ footer {
     <a href="#process">Process</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#faq">FAQ</a>
+    <a href="#terms">Terms</a>
   </div>
 
-  <a href="#" data-wa class="nav-btn" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> Free Consultation
+  <a href="#" data-wa class="nav-btn" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+    Free Consultation
   </a>
 </nav>
 
-<!-- HERO SECTION -->
+
+<!-- HERO -->
+
 <section class="hero">
 
-  <!-- TOP CLICKABLE HERO IMAGE WITH USER-FOCUSED OFFER OVERLAY -->
-  <a href="#" data-wa class="hero-image-box" target="_blank" title="Click to claim 10% off on WhatsApp">
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Luxury Interior Living Room">
-    
+  <a
+    href="#"
+    data-wa
+    class="hero-image-box"
+    target="_blank"
+    rel="noopener"
+    title="Contact Vera Living on WhatsApp"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80"
+      alt="Modern luxury interior living room"
+    >
+
     <div class="image-offer-overlay">
       <div class="offer-tag-main">
-        <span class="discount"><i class="fa-solid fa-fire"></i> 10% OFFER </span>
-        <span class="sub-text">Limited Time Design Discount</span>
+        <span class="discount">
+          <i class="fa-solid fa-sparkles"></i>
+          Interior Design Consultation
+        </span>
+
+        <span class="sub-text">
+          Discuss your project with our team
+        </span>
       </div>
+
       <div class="wa-action-chip">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
       </div>
     </div>
   </a>
 
   <div class="hero-btn-wrap">
-    <a href="#" data-wa class="btn-primary" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i> Claim Offer & Book Site Visit
+    <a href="#" data-wa class="btn-primary" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      Discuss Your Project
     </a>
   </div>
 
   <div class="hero-text-content">
+
     <div class="badge-tag">
-      <i class="fa-solid fa-crown"></i> Luxury Interior & Architecture
+      <i class="fa-solid fa-crown"></i>
+      Interior & Architecture
     </div>
-    <h1>Transforming Spaces Into <span>Timeless Masterpieces</span></h1>
-    <p>We blend modern aesthetics with functional luxury to craft bespoke interiors for premium residences, villas, and boutique commercial spaces.</p>
+
+    <h1>
+      Transforming Spaces Into
+      <span>Timeless Masterpieces</span>
+    </h1>
+
+    <p>
+      Vera Living creates thoughtfully designed interiors that combine
+      modern aesthetics, functionality and personalized details for
+      homes, villas and selected commercial spaces.
+    </p>
+
   </div>
 
 </section>
 
-<!-- STATS SECTION -->
+
+<!-- STATS / CAPABILITIES -->
+
 <section class="stats-section">
+
   <div class="stats-grid">
+
     <div class="stat-item">
-      <h3>350+</h3>
-      <p>Luxury Homes Designed</p>
+      <h3>Premium</h3>
+      <p>Interior Design</p>
     </div>
+
     <div class="stat-item">
-      <h3>12+</h3>
-      <p>Years Experience</p>
+      <h3>End-to-End</h3>
+      <p>Design & Execution</p>
     </div>
+
     <div class="stat-item">
-      <h3>100%</h3>
-      <p>On-Time Delivery</p>
+      <h3>3D</h3>
+      <p>Design Visualization</p>
     </div>
+
     <div class="stat-item">
-      <h3>15 Year</h3>
-      <p>Material Warranty</p>
+      <h3>Custom</h3>
+      <p>Furniture Solutions</p>
     </div>
+
   </div>
+
 </section>
 
-<!-- SERVICES SECTION -->
+
+<!-- SERVICES -->
+
 <section class="services-section" id="services">
+
   <div class="section-title">
     <h2>Our Bespoke Services</h2>
-    <p>Complete turn-key interior design and architectural planning solutions.</p>
+    <p>
+      Interior design and architectural solutions tailored to your space,
+      requirements and preferences.
+    </p>
   </div>
 
   <div class="bento-grid">
-    
-    <div class="bento-card">
-      <div>
-        <div class="card-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
-        <h3>Full Home Turnkey Interiors</h3>
-        <p>End-to-end design, modular furniture, civil work, lighting, and final handover with zero hassle.</p>
-      </div>
-      <a href="#" data-wa class="card-link" target="_blank">Inquire Now <i class="fa-solid fa-chevron-right"></i></a>
-    </div>
 
     <div class="bento-card">
+
       <div>
-        <div class="card-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+        <div class="card-icon">
+          <i class="fa-solid fa-house-chimney-window"></i>
+        </div>
+
+        <h3>Full Home Interiors</h3>
+
+        <p>
+          Complete interior planning covering layouts, furniture,
+          lighting, finishes and coordinated execution for residential spaces.
+        </p>
+      </div>
+
+      <a href="#" data-wa class="card-link" target="_blank" rel="noopener">
+        Discuss Project
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="bento-card">
+
+      <div>
+        <div class="card-icon">
+          <i class="fa-solid fa-vr-cardboard"></i>
+        </div>
+
         <h3>3D Visualization & Architecture</h3>
-        <p>Photorealistic 3D renders and walk-throughs to preview your space before actual execution starts.</p>
+
+        <p>
+          Visualize your proposed interiors with detailed 3D concepts,
+          material selections and space planning before execution.
+        </p>
       </div>
-      <a href="#" data-wa class="card-link" target="_blank">Inquire Now <i class="fa-solid fa-chevron-right"></i></a>
+
+      <a href="#" data-wa class="card-link" target="_blank" rel="noopener">
+        Discuss Project
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
     </div>
 
+
     <div class="bento-card">
+
       <div>
-        <div class="card-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+        <div class="card-icon">
+          <i class="fa-solid fa-kitchen-set"></i>
+        </div>
+
         <h3>Custom Furniture & Kitchens</h3>
-        <p>German-engineered modular kitchens, custom wardrobes, and hand-crafted luxury furniture units.</p>
+
+        <p>
+          Personalized kitchens, wardrobes, storage solutions and furniture
+          designed around your space and functional requirements.
+        </p>
       </div>
-      <a href="#" data-wa class="card-link" target="_blank">Inquire Now <i class="fa-solid fa-chevron-right"></i></a>
+
+      <a href="#" data-wa class="card-link" target="_blank" rel="noopener">
+        Discuss Project
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- PROCESS WORKFLOW SECTION -->
+
+<!-- PROCESS -->
+
 <section class="process-section" id="process">
+
   <div class="section-title">
     <h2>How We Work</h2>
-    <p>A simple 4-step seamless journey from concept to reality.</p>
+    <p>
+      A straightforward journey from understanding your requirements
+      to completing your interior project.
+    </p>
   </div>
 
   <div class="process-grid">
+
     <div class="process-card">
       <div class="step-num">01</div>
+
       <h4>Discovery Call</h4>
-      <p>We discuss your lifestyle, budget, layout ideas, and aesthetic preferences.</p>
+
+      <p>
+        We discuss your space, lifestyle, preferences, requirements
+        and initial project expectations.
+      </p>
     </div>
+
 
     <div class="process-card">
       <div class="step-num">02</div>
-      <h4>3D Design & Plan</h4>
-      <p>We present customized 3D renders, material boards, and detailed cost estimates.</p>
+
+      <h4>Design & Planning</h4>
+
+      <p>
+        We develop layouts, concepts, material directions and
+        visualization based on the agreed project scope.
+      </p>
     </div>
+
 
     <div class="process-card">
       <div class="step-num">03</div>
-      <h4>Execution & Build</h4>
-      <p>Our skilled craftsmen execute civil, electrical, and furniture works under strict supervision.</p>
+
+      <h4>Execution</h4>
+
+      <p>
+        Approved designs are coordinated with the required vendors,
+        craftsmen and execution teams.
+      </p>
     </div>
+
 
     <div class="process-card">
       <div class="step-num">04</div>
-      <h4>Handover</h4>
-      <p>Deep cleaning, final inspection, and handing over your dream home on schedule.</p>
+
+      <h4>Final Handover</h4>
+
+      <p>
+        The completed work is reviewed with the client before the
+        project is considered complete.
+      </p>
     </div>
+
   </div>
+
 </section>
 
-<!-- PORTFOLIO SHOWCASE SECTION -->
+
+<!-- PORTFOLIO -->
+
 <section class="portfolio-section" id="portfolio">
+
   <div class="section-title">
-    <h2>Recent Work</h2>
-    <p>Explore some of our recently completed interior projects.</p>
+    <h2>Selected Design Work</h2>
+
+    <p>
+      Explore visual references representing the style and direction
+      of our interior design work.
+    </p>
   </div>
 
   <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Minimalist Villa">
-      <div class="portfolio-info">
-        <h4>The Royal Villa</h4>
-        <p>4 BHK Modern Minimalist Interior • Green Glen</p>
-      </div>
-    </div>
 
     <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Penthouse Living">
+
+      <img
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
+        alt="Modern minimalist villa interior"
+        loading="lazy"
+      >
+
       <div class="portfolio-info">
-        <h4>Skyline Penthouse</h4>
-        <p>Contemporary Luxury Living • Indiranagar</p>
+        <h4>Modern Villa Interior</h4>
+        <p>
+          Contemporary residential interior concept
+        </p>
       </div>
+
     </div>
 
+
     <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Modular Kitchen">
+
+      <img
+        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+        alt="Contemporary penthouse living room"
+        loading="lazy"
+      >
+
       <div class="portfolio-info">
-        <h4>Italian Modular Kitchen</h4>
-        <p>Acrylic Finish & Smart Hardware • Jubilee Hills</p>
+        <h4>Contemporary Living Space</h4>
+        <p>
+          Refined living area with modern detailing
+        </p>
       </div>
+
     </div>
+
+
+    <div class="portfolio-item">
+
+      <img
+        src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80"
+        alt="Modern modular kitchen"
+        loading="lazy"
+      >
+
+      <div class="portfolio-info">
+        <h4>Modern Modular Kitchen</h4>
+        <p>
+          Functional kitchen design with clean finishes
+        </p>
+      </div>
+
+    </div>
+
   </div>
+
 </section>
+
 
 <!-- MIDDLE BANNER -->
+
 <section class="middle-banner">
+
   <div class="banner-box">
+
     <div class="banner-info">
-      <h3>Unmatched Craftsmanship & Transparent Pricing</h3>
-      <p>We eliminate hidden costs and project delays. Get fixed timelines with dedicated project managers.</p>
-      
+
+      <h3>
+        Thoughtful Design. Clear Communication.
+      </h3>
+
+      <p>
+        We focus on understanding your requirements, planning the design
+        carefully and communicating the project scope clearly before execution.
+      </p>
+
       <div class="banner-features">
+
         <div class="feature-point">
-          <i class="fa-solid fa-circle-check"></i> 146 Quality Checkpoints
+          <i class="fa-solid fa-circle-check"></i>
+          Requirement-focused design
         </div>
+
         <div class="feature-point">
-          <i class="fa-solid fa-circle-check"></i> Factory-Finished Precision
+          <i class="fa-solid fa-circle-check"></i>
+          Detailed design planning
         </div>
+
         <div class="feature-point">
-          <i class="fa-solid fa-circle-check"></i> No Price Escalation Guarantee
+          <i class="fa-solid fa-circle-check"></i>
+          Transparent project discussions
         </div>
+
       </div>
 
-      <a href="#" data-wa class="btn-primary" style="padding: 12px 26px; font-size: 13px;" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> Speak With Principal Architect
+      <a
+        href="#"
+        data-wa
+        class="btn-primary"
+        style="padding: 12px 26px; font-size: 13px;"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        Speak With Our Team
       </a>
+
     </div>
+
 
     <div class="banner-img">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Interior Architect Work">
+
+      <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+        alt="Interior design workspace"
+        loading="lazy"
+      >
+
     </div>
+
   </div>
+
 </section>
 
-<!-- TESTIMONIALS SECTION -->
+
+<!-- WHY CHOOSE US -->
+
 <section class="testimonials-section">
+
   <div class="section-title">
-    <h2>Client Stories</h2>
-    <p>Read what home owners say about their experience with Vera Living.</p>
+
+    <h2>Our Design Approach</h2>
+
+    <p>
+      Every project begins with understanding how you want your space to look,
+      feel and function.
+    </p>
+
   </div>
+
 
   <div class="reviews-grid">
-    <div class="review-card">
-      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p>"Vera Living delivered our villa 10 days ahead of schedule! The 3D render and actual home look 100% identical."</p>
-      <div class="client-meta">
-        <h5>Vikram & Sneha Mehta</h5>
-        <span>Villa Owners</span>
-      </div>
-    </div>
 
     <div class="review-card">
-      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p>"The finish quality of modular wardrobes and lighting layout is top tier. Excellent team and transparent pricing."</p>
-      <div class="client-meta">
-        <h5>Ananya Deshmukh</h5>
-        <span>Penthouse Owner</span>
+
+      <div class="review-icon">
+        <i class="fa-solid fa-compass-drafting"></i>
       </div>
+
+      <p>
+        We begin with your requirements and create design directions
+        that balance aesthetics, functionality and everyday usability.
+      </p>
+
+      <div class="client-meta">
+        <h5>Personalized Planning</h5>
+        <span>Design approach</span>
+      </div>
+
     </div>
 
+
     <div class="review-card">
-      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p>"Professional architects who listened to all our custom requirements carefully. Highly recommended!"</p>
-      <div class="client-meta">
-        <h5>Rajesh Malhotra</h5>
-        <span>3 BHK Home Owner</span>
+
+      <div class="review-icon">
+        <i class="fa-solid fa-layer-group"></i>
       </div>
+
+      <p>
+        Materials, colors, furniture and lighting are considered together
+        so the final space feels cohesive rather than pieced together.
+      </p>
+
+      <div class="client-meta">
+        <h5>Coordinated Design</h5>
+        <span>Material & space planning</span>
+      </div>
+
     </div>
+
+
+    <div class="review-card">
+
+      <div class="review-icon">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+
+      <p>
+        We encourage clear communication throughout the project so that
+        design decisions and scope can be discussed before execution.
+      </p>
+
+      <div class="client-meta">
+        <h5>Clear Communication</h5>
+        <span>Project coordination</span>
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
-<!-- FAQ SECTION -->
+
+<!-- FAQ -->
+
 <section class="faq-section" id="faq">
+
   <div class="section-title">
+
     <h2>Frequently Asked Questions</h2>
-    <p>Got questions? We've got answers.</p>
+
+    <p>
+      Some common questions about our interior design services.
+    </p>
+
   </div>
+
 
   <div class="faq-container">
-    <div class="faq-item">
-      <h4>How much time does a full home interior take?</h4>
-      <p>Typically, a 3 BHK or Villa takes between 45 to 60 days from design sign-off to final handover.</p>
-    </div>
 
     <div class="faq-item">
-      <h4>Do you provide warranty on furniture & materials?</h4>
-      <p>Yes, we offer up to 15 years flat warranty on core plywood and hardware components.</p>
+
+      <h4>
+        How does the interior design process start?
+      </h4>
+
+      <p>
+        You can contact us through WhatsApp to discuss your project.
+        We can then understand your requirements, space and preferred
+        design direction before discussing the next steps.
+      </p>
+
     </div>
 
+
     <div class="faq-item">
-      <h4>Can I customize the design according to my budget?</h4>
-      <p>Absolutely. Our architects tailor material selections and layouts based on your target budget.</p>
+
+      <h4>
+        Can the design be customized to my budget?
+      </h4>
+
+      <p>
+        Yes. Material choices, furniture specifications and the overall
+        project scope can be discussed according to your requirements
+        and available budget.
+      </p>
+
     </div>
+
+
+    <div class="faq-item">
+
+      <h4>
+        Do you provide 3D designs?
+      </h4>
+
+      <p>
+        3D visualization can be included depending on the selected
+        service and agreed project scope.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h4>
+        How long does an interior project take?
+      </h4>
+
+      <p>
+        Project duration varies depending on the size, design scope,
+        material availability and execution requirements. A timeline
+        can be discussed after understanding the project.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h4>
+        Do you provide warranty?
+      </h4>
+
+      <p>
+        Warranty terms, if applicable, depend on the specific products,
+        materials, hardware and services included in the agreed project.
+        Applicable warranty details should be confirmed before purchase.
+      </p>
+
+    </div>
+
   </div>
+
 </section>
 
-<!-- CTA SECTION -->
+
+<!-- TERMS & CONDITIONS -->
+
+<section class="terms-section" id="terms">
+
+  <div class="terms-container">
+
+    <div class="section-title">
+      <h2>Terms & Conditions</h2>
+      <p>
+        Please review the following general terms before engaging our services.
+      </p>
+    </div>
+
+
+    <h3>1. Services</h3>
+
+    <p>
+      Vera Living provides interior design, space planning, visualization,
+      furniture, modular kitchen and related design or execution services
+      depending on the project scope agreed with the client.
+    </p>
+
+
+    <h3>2. Project Scope</h3>
+
+    <p>
+      The exact scope of work, materials, specifications, quantities,
+      deliverables and services will be discussed and confirmed before
+      project execution. Any work outside the agreed scope may be quoted
+      separately.
+    </p>
+
+
+    <h3>3. Pricing & Estimates</h3>
+
+    <p>
+      Initial discussions or estimates are indicative unless specifically
+      confirmed as a final quotation. Final pricing may depend on selected
+      materials, dimensions, design changes, quantities, site conditions,
+      transportation and other project requirements.
+    </p>
+
+
+    <h3>4. Design Approval</h3>
+
+    <p>
+      Design concepts, drawings, layouts, material selections and other
+      project details should be reviewed and approved by the client before
+      execution. Changes requested after approval may affect cost and timeline.
+    </p>
+
+
+    <h3>5. Project Timelines</h3>
+
+    <p>
+      Project timelines depend on the agreed scope, approvals, material
+      availability, site readiness, third-party vendors and other circumstances.
+      Any estimated completion date will be communicated based on the project
+      conditions known at the time.
+    </p>
+
+
+    <h3>6. Payments</h3>
+
+    <p>
+      Payment schedules and amounts will be communicated as part of the
+      project quotation or agreement. Work may be scheduled according to
+      the agreed payment milestones.
+    </p>
+
+
+    <h3>7. Materials & Product Availability</h3>
+
+    <p>
+      Material and product availability may vary. If a selected product is
+      unavailable, alternatives may be discussed with the client before
+      proceeding with a replacement.
+    </p>
+
+
+    <h3>8. Warranty</h3>
+
+    <p>
+      Any warranty offered for a particular product, material, hardware item
+      or service will be subject to the applicable manufacturer or project
+      warranty terms. Warranty coverage should be confirmed in writing before
+      purchase or installation where applicable.
+    </p>
+
+
+    <h3>9. Client Responsibilities</h3>
+
+    <p>
+      The client is responsible for providing accurate project information,
+      access to the site when required, timely approvals and other information
+      reasonably necessary for the project.
+    </p>
+
+
+    <h3>10. Portfolio & Photography</h3>
+
+    <p>
+      Project photographs or completed work may only be used for portfolio,
+      marketing or promotional purposes where appropriate permissions have
+      been obtained from the relevant client.
+    </p>
+
+
+    <h3>11. Communication</h3>
+
+    <p>
+      Project communication may take place through WhatsApp, phone, email or
+      other mutually agreed channels. Important commercial decisions,
+      approvals and changes should be documented appropriately.
+    </p>
+
+
+    <h3>12. General</h3>
+
+    <p>
+      These general terms are provided for informational purposes. Specific
+      project agreements, quotations and written confirmations may contain
+      additional terms applicable to an individual project.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
 <section class="cta-section" id="contact">
+
   <div class="cta-box">
-    <h2>Ready To Build Your Dream Home?</h2>
-    <p>Get a free 3D estimate and site consultation with our expert interior designer.</p>
-    <a href="#" data-wa class="cta-btn-light" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i> Get Free Quote
+
+    <h2>
+      Ready To Plan Your Space?
+    </h2>
+
+    <p>
+      Share your requirements with Vera Living and start a conversation
+      about your interior design project.
+    </p>
+
+    <a
+      href="#"
+      data-wa
+      class="cta-btn-light"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      Get In Touch
     </a>
+
   </div>
+
 </section>
+
 
 <!-- FOOTER -->
+
 <footer>
+
   <div class="footer-grid">
-    <div class="footer-col">
-      <div class="logo" style="margin-bottom: 14px; color:#fff;">
-        <div class="logo-badge"><i class="fa-solid fa-couch"></i></div>
-        Vera Living
-      </div>
-      <p>Crafting luxury interiors, villas, and modern residential spaces with perfection.</p>
-    </div>
 
     <div class="footer-col">
+
+      <div
+        class="logo"
+        style="margin-bottom:14px;color:#fff;"
+      >
+        <div class="logo-badge">
+          <i class="fa-solid fa-couch"></i>
+        </div>
+
+        Vera Living
+      </div>
+
+      <p>
+        Thoughtful interior design, custom furniture and modern
+        space-planning solutions for residential and selected commercial spaces.
+      </p>
+
+    </div>
+
+
+    <div class="footer-col">
+
       <h4>Quick Links</h4>
+
       <div class="footer-links">
+
         <a href="#">Home</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#faq">FAQ</a>
+        <a href="#terms">Terms & Conditions</a>
+
       </div>
+
     </div>
 
+
     <div class="footer-col">
+
       <h4>Services</h4>
+
       <div class="footer-links">
-        <a href="#services">Turnkey Interiors</a>
+
+        <a href="#services">Full Home Interiors</a>
         <a href="#services">3D Visualization</a>
+        <a href="#services">Custom Furniture</a>
         <a href="#services">Modular Kitchens</a>
+
       </div>
+
     </div>
 
+
     <div class="footer-col">
-      <h4>Contact Info</h4>
-      <p style="margin-bottom:8px;"><i class="fa-solid fa-phone" style="color:var(--primary-gold); margin-right:8px;"></i> +91 74139 51362</p>
-      <p><i class="fa-solid fa-envelope" style="color:var(--primary-gold); margin-right:8px;"></i> contact@veraliving.com</p>
+
+      <h4>Contact</h4>
+
+      <p style="margin-bottom:8px;">
+        <i
+          class="fa-solid fa-phone"
+          style="color:var(--primary-gold);margin-right:8px;"
+        ></i>
+
+        +447393922510
+      </p>
+
+      <p style="margin-bottom:8px;">
+        <i
+          class="fa-brands fa-whatsapp"
+          style="color:var(--primary-gold);margin-right:8px;"
+        ></i>
+
+        WhatsApp Available
+      </p>
+
+      <p>
+        <i
+          class="fa-solid fa-globe"
+          style="color:var(--primary-gold);margin-right:8px;"
+        ></i>
+
+        veraliving.shop
+      </p>
+
     </div>
+
   </div>
+
 
   <div class="footer-bottom">
-    <p>© 2026 Vera Living Studio. All Rights Reserved.</p>
+
+    <p>
+      © 2026 Vera Living Studio. All Rights Reserved.
+    </p>
+
   </div>
+
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="#" data-wa class="float-wa" target="_blank">
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  href="#"
+  data-wa
+  class="float-wa"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contact Vera Living on WhatsApp"
+>
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<!-- AUTOMATIC WHATSAPP SCRIPT -->
-<script>
-  const phoneNumber = "+447393922510";
-  const message = encodeURIComponent("Hello! I Want Services.");
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
-  document.querySelectorAll('[data-wa]').forEach(link => {
+<!-- WHATSAPP SCRIPT -->
+
+<script>
+  /*
+    Vera Living WhatsApp Contact
+    This script assigns the same WhatsApp destination
+    to every element marked with data-wa.
+  */
+
+  const phoneNumber = "+447393922510";
+
+  const message = encodeURIComponent(
+    "Hello! I am interested in Vera Living interior design services. I would like to discuss my project."
+  );
+
+  const whatsappUrl =
+    `https://wa.me/${phoneNumber}?text=${message}`;
+
+  document.querySelectorAll("[data-wa]").forEach(function(link) {
     link.href = whatsappUrl;
   });
 </script>
